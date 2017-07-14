@@ -1,3 +1,14 @@
+// function handles array to find all numbers that are divisible by 15 and replaces them with "ping-pong"
+var makes15PingPong = function(array, total) {
+  for (var i = 0; i < total; i++)  {
+    if (array[i] % 15 === 0) {
+      array[i] = "ping-pong";
+    }
+  }
+
+  return array;
+};
+
 // function handles array to find all numbers that are divisible by 3 and replaces them with "ping".
 var makesThreesPing = function(array, total) {
   for (var i = 0; i < total; i++) {
@@ -27,6 +38,7 @@ var generatePingPong = function(integer) {
     outputArray[i] = i + 1;
   }
 
+  outputArray = makes15PingPong(outputArray, integer);
   outputArray = makesThreesPing(outputArray, integer);
   outputArray = makesFivesPong(outputArray, integer);
 

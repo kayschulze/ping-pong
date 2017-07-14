@@ -10,82 +10,87 @@
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Meddon|Salsa|Sniglet" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Englebert|Meddon|Salsa|Sniglet" rel="stylesheet">
   </head>
   <body>
-    <div class="container title">
-      <h1>Ping-Pong Extravaganza!!!</h1>
-    </div>
-
-    <div class="container menu col-md-3">
-      <h2>Programming Tools</h2>
-      <h3>These tools helped build our website</h3>
-      <ul>
-        <li><a href="https://www.w3schools.com/html/">HTML</a></li>
-        <li><a href="https://www.w3schools.com/html/html_css.asp">CSS</a></li>
-        <li><a href="https://www.w3schools.com/html/html_scripts.asp">Javascript</a></li>
-        <li><a href="https://www.w3schools.com/js/js_loop_for.asp">For Loops</a></li>
-        <li><a href="https://github.com/kayschulze/ping-pong/blob/master/README.md">README.md</a></li>
-      </ul>
-
-      <h4>Contact Me:  <a href="mailto: kimberlykayschulze@gmail.com">Kim Schulze</a></h4>
-    </div>
-
-    <div class="container game col-md-4">
-      <h2>This is our game:</h2>
-      <h3>Please enter an integer.</h3>
-      <form id="userInput">
-        <input id="integer" type="text">
-        <button type="submit" button id="myGame">Let's Play</button>
-      </form>
-
-      <div id="pingPongDisplay">
-          <ul class="listItem" id="outputtedArray">
-          </ul>
-      </div>
-      <img src="img/numbers.jpeg" class="img-circle">
-    </div>
-
-    <div class="container yourGame col-md-4">
-      <h2>Now try your game:</h2>
-      <p>In your game, you will chose a factor and decide which word to replace it with.</p>
-      <form id="userChoice">
-        <div class="form-group">
-          <label for="factor1">Factor 1:</label>
-          <input id="factor1" type="text">
-        <div class="form-group">
-          <label for="word1">Word 1:</label>
-          <input id="word1" type="text">
-        </div>
-
-        <div class="form-group">
-          <label for="factor2">Factor 2:</label>
-          <input id="factor2" type="text">
-        <div class="form-group">
-          <label for="word2">Word 2:</label>
-          <input id="word2" type="text">
-        </div>
-
-        <div class="form-group">
-          <label for="factor3">Factor 3:</label>
-          <input id="factor3" type="text">
-        <div class="form-group">
-          <label for="word3">Word 3:</label>
-          <input id="word3" type="text">
-        </div>
-
-        <div class="form-group">
-          <label for="yourInteger">Your Number:</label>
-          <input id="yourInteger" type="text">
-        </div>
-        <button type="submit" id="yourGame">Let's Try It</button>
-      </form>
-
-      <div id="yourDisplay">
-          <ul class="yourListItem" id="outputtedArray">
-          </ul>
+    <div class="container">
+      <div class="container title">
+        <h1>Ping-Pong Extravaganza!!!</h1>
       </div>
 
+      <div class="container menu col-md-3">
+        <h2>Programming Tools</h2>
+        <h3>These tools helped build our website</h3>
+        <ul>
+          <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+          <li><a href="https://www.w3schools.com/html/html_css.asp">CSS</a></li>
+          <li><a href="https://www.w3schools.com/html/html_scripts.asp">Javascript</a></li>
+          <li><a href="https://www.w3schools.com/js/js_loop_for.asp">For Loops</a></li>
+          <li><a href="https://github.com/kayschulze/ping-pong/blob/master/README.md">README.md</a></li>
+        </ul>
+
+        <h4>Contact Me:  <a href="mailto: kimberlykayschulze@gmail.com">Kim Schulze</a></h4>
+      </div>
+
+      <div class="container game col-md-4">
+        <h2>This is our game:</h2>
+        <h3>Please enter an integer.</h3>
+        <form id="userInput">
+          <input id="integer" type="text">
+          <button type="submit" button id="myGame">Let's Play</button>
+        </form>
+
+        <div id="pingPongDisplay">
+            <ul class="listItem" id="outputtedArray">
+            </ul>
+        </div>
+        <img src="img/numbers.jpeg" class="img-circle">
+      </div>
+
+      <div class="container yourGame col-md-4">
+        <h2>Now try your game:</h2>
+        <p>In your game, you will chose a factor and decide which word to replace it with.</p>
+        <form id="userChoice">
+          <div class="form-group">
+            <label for="factor1">Factor 1:</label>
+            <input id="factor1" type="text">
+          </div>
+          <div class="form-group">
+            <label for="word1">Word 1:</label>
+            <input id="word1" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="factor2">Factor 2:</label>
+            <input id="factor2" type="text">
+          </div>
+          <div class="form-group">
+            <label for="word2">Word 2:</label>
+            <input id="word2" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="factor3">Factor 3:</label>
+            <input id="factor3" type="text">
+          </div>
+          <div class="form-group">
+            <label for="word3">Word 3:</label>
+            <input id="word3" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="yourInteger">Your Number:</label>
+            <input id="yourInteger" type="text">
+          </div>
+          <button type="submit" id="yourGame">Let's Try It</button>
+        </form>
+
+        <div id="yourDisplay">
+            <ul class="yourListItem" id="outputtedArray">
+            </ul>
+        </div>
+      </div>
     </div>
+    <center><strong>Kim Schulze &copy 2017</strong></center>
   </body>
 </html>

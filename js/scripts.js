@@ -77,15 +77,6 @@ var initializeYourArray = function(int) {
   return yourGameArray;
 };
 
-// function handles all other functions for determining final Ping Pong output array
-// var generateYourPingPong = function(factor, word, int) {
-//   var yourGameArray = initializeYourArray(int);
-//
-//   yourGameArray = playingYourGame(yourGameArray, factor, word, int);
-//
-//   return yourGameArray;
-// };
-
 var isInteger = function(number) {
   return number % 1 === 0;
 };
@@ -100,18 +91,14 @@ var validateInput = function(input) {
 };
 
 // Validate all integers from your game
-var validateAllIntegers = function(array, number) {
+var validateIntegerArray = function(array) {
   for (var i = 0; i < 3; i++) {
-    if (!validateInput(array[i])) {
+    if (array[i] != null && validateInput(array[i])) {
       return false;
     }
-  }
-
-  if (!validateInput(number)) {
-    return false;
-  }
-  else {
-    return true;
+    else {
+      return true;
+    }
   }
 };
 
@@ -166,7 +153,7 @@ $(function() {
 
     yourArray = initializeYourArray(yourNumber);
 
-    if (validateAllIntegers(inputFactor, yourNumber)) {
+    if (validateIntegerArray(inputFactor) && validateInput(yourNumber)) {
       for (var i = 0; i < 3; i++) {
         yourArray = playingYourGame(yourArray, inputFactor[i], inputWord[i], yourNumber);
       }

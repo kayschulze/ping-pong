@@ -68,6 +68,38 @@ var playingYourGame = function(array, factor, word, total) {
   return array;
 };
 
+// Validate whether input is a number.
+var validateInput = function(input) {
+  if (input > 1 && isInteger(input)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+};
+
+var validateIntegerNull = function(input) {
+  console.log(input);
+  if (validateInput(input) || input === undefined) {
+    return true;
+  }
+  else {
+    return false;
+  }
+};
+
+// Validate all integers from your game.
+var validateIntegerArray = function(array) {
+  for (var i = 0; i < 3; i++) {
+    if (!validateIntegerNull(array[i])) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+// Create an array with the number requested by the user.
 var initializeYourArray = function(int) {
   var yourGameArray = [];
   for (var i = 0; i < int; i++) {
@@ -79,27 +111,6 @@ var initializeYourArray = function(int) {
 
 var isInteger = function(number) {
   return number % 1 === 0;
-};
-
-var validateInput = function(input) {
-  if (input > 1 && isInteger(input)) {
-    return true;
-  }
-  else {
-    return false;
-  }
-};
-
-// Validate all integers from your game
-var validateIntegerArray = function(array) {
-  for (var i = 0; i < 3; i++) {
-    if (array[i] != null && validateInput(array[i])) {
-      return false;
-    }
-    else {
-      return true;
-    }
-  }
 };
 
 // main function takes user input and calls a ping pong function and sends output back to the webpage.

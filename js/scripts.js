@@ -45,6 +45,15 @@ var generatePingPong = function(integer) {
   return outputArray;
 };
 
+var validateInput = function(input) {
+  if (input > 1) {
+    return true;
+  }
+  else {
+    return false;
+  }
+};
+
 // main function takes user input and calls a ping pong function and sends output back to the webpage.
 $(function() {
   $("#userInput").submit(function(event) {
@@ -52,14 +61,18 @@ $(function() {
     // stores user input into a variable.
     var inputtedNumber = $("#integer").val();
 
-    // Calls Ping Pong counting function and returns array.git
-    var outputtedArray = generatePingPong(inputtedNumber);
+    if (validateInput(inputtedNumber)) {
+      console.log('hiya');
+      // Calls Ping Pong counting function and returns array.git
+      var outputtedArray = generatePingPong(inputtedNumber);
 
-    // Uses array to output.
-    for (var j = 0; j < outputtedArray.length; j++) {
-      $("ul").append("<li>" + outputtedArray[j] + "</li>");
-      //$("#integerOutput").text(outputtedArray[j]);
-      //$("#integerOutput").text(outputtedArray[j]);
+      // Uses array to output.
+      for (var j = 0; j < outputtedArray.length; j++) {
+        $("ul").append("<li>" + outputtedArray[j] + "</li>");
+      }
+    }
+    else {
+      $("ul").append("<li> This is not a valid input.  Please try again. <li>");
     }
   });
 });

@@ -64,8 +64,8 @@ $(function() {
     event.preventDefault();
 
     // empties ul tag before displaying another input.
-    $("ul").empty();
-    
+    $("ul.listItem").empty();
+
     // stores user input into a variable.
     var inputtedNumber = $("#integer").val();
 
@@ -75,12 +75,12 @@ $(function() {
 
       // Uses array to output.
       for (var j = 0; j < outputtedArray.length; j++) {
-        $("ul").append("<li>" + outputtedArray[j] + "</li>");
+        $("ul.listItem").append("<li>" + outputtedArray[j] + "</li>");
       }
     }
     else {
 
-      $("ul").append("<li> This is not a valid input.  Please try again. <li>");
+      $("ul.listItem").append("<li> This is not a valid input.  Please try again. <li>");
     }
   });
 });

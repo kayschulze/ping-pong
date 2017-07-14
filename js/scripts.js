@@ -21,7 +21,8 @@ $(function() {
 
     // Uses array to output.
     for (var j = 0; j < outputtedArray.length; j++) {
-      $("#integerOutput").text(outputtedArray[j]);
+      $("ul").append("<li>" + outputtedArray[j] + "</li>");
+      //$("#integerOutput").text(outputtedArray[j]);
       //$("#integerOutput").text(outputtedArray[j]);
     }
   });

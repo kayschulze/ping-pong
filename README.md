@@ -40,6 +40,7 @@ _This file contains a folder for CSS (css), Javascript (js), and images (img) th
 * Example Input: [4, hey, 8]
 * Example Output: [1, 2, 3, hey, 5, 6, 7, hey]
 9. User can add at least three factors and words to make their own game.
+10. User's game is validated for errors.
 
 ## Known Bugs
 

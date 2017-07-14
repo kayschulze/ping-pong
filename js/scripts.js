@@ -99,6 +99,21 @@ var validateInput = function(input) {
   }
 };
 
+// Validate all integers from your game
+var validateAllIntegers = function(array, number) {
+  for (var i = 0; i < 3; i++) {
+    if (!validateInput(array[i])) {
+      return false;
+    }
+  }
+
+  if (!validateInput(number)) {
+    return false;
+  }
+  else {
+    return true;
+  }
+};
 
 // main function takes user input and calls a ping pong function and sends output back to the webpage.
 $(function() {
@@ -151,13 +166,17 @@ $(function() {
 
     yourArray = initializeYourArray(yourNumber);
 
-    for (var i = 0; i < 3; i++) {
-      yourArray = playingYourGame(yourArray, inputFactor[i], inputWord[i], yourNumber);
-      console.log(yourArray);
-    }
+    if (validateAllIntegers(inputFactor, yourNumber)) {
+      for (var i = 0; i < 3; i++) {
+        yourArray = playingYourGame(yourArray, inputFactor[i], inputWord[i], yourNumber);
+      }
 
-    for (var j = 0; j < yourArray.length; j++) {
-      $("ul.yourListItem").append("<li>" + yourArray[j] + "</li>");
+      for (var j = 0; j < yourArray.length; j++) {
+        $("ul.yourListItem").append("<li>" + yourArray[j] + "</li>");
+      }
+    }
+    else {
+      $("ul.yourListItem").append("<li> This is not a valid input.  Please try again. <li>");
     }
   });
 });

@@ -62,6 +62,10 @@ var validateInput = function(input) {
 $(function() {
   $("#userInput").submit(function(event) {
     event.preventDefault();
+
+    // empties ul tag before displaying another input.
+    $("ul").empty();
+    
     // stores user input into a variable.
     var inputtedNumber = $("#integer").val();
 
@@ -75,6 +79,7 @@ $(function() {
       }
     }
     else {
+
       $("ul").append("<li> This is not a valid input.  Please try again. <li>");
     }
   });

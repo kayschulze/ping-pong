@@ -31,16 +31,6 @@ var makesFivesPong = function(array, total) {
   return array;
 };
 
-var playingYourGame = function(array, factor, word, total) {
-  for (var i = 0; i < total; i++) {
-    if (array[i] % factor === 0) {
-      array[i] = word;
-    }
-  }
-
-  return array;
-};
-
 // function handles all other functions for determining final Ping Pong output array
 var generatePingPong = function(integer) {
   var outputArray = [];
@@ -68,18 +58,33 @@ var validateInput = function(input) {
   }
 };
 
+var playingYourGame = function(array, factor, word, total) {
+  for (var i = 0; i < total; i++) {
+    if (array[i] % factor === 0) {
+      array[i] = word;
+    }
+  }
 
-// function handles all other functions for determining final Ping Pong output array
-var generateYourPingPong = function(factor, word, int) {
+  return array;
+};
+
+var initializeYourArray = function(int) {
   var yourGameArray = [];
   for (var i = 0; i < int; i++) {
     yourGameArray[i] = i + 1;
   }
 
-  yourGameArray = playingYourGame(yourGameArray, factor, word, int);
-
   return yourGameArray;
 };
+
+// function handles all other functions for determining final Ping Pong output array
+// var generateYourPingPong = function(factor, word, int) {
+//   var yourGameArray = initializeYourArray(int);
+//
+//   yourGameArray = playingYourGame(yourGameArray, factor, word, int);
+//
+//   return yourGameArray;
+// };
 
 var isInteger = function(number) {
   return number % 1 === 0;
@@ -124,14 +129,32 @@ $(function() {
   $("#userChoice").submit(function(event) {
     event.preventDefault();
 
-    //empties ul tag before displaying another input.
+    // Empties ul tag before displaying another input.
     $("ul.yourListItem").empty();
 
-    var inputFactor = parseInt($("#factor1").val());
-    var inputWord = $("#word1").val();
+    // Declares inputs as arrays
+    var inputFactor = [];
+    var inputWord = [];
+
+    // Gather input from first factor to change numbers
+    inputFactor[0] = parseInt($("#factor1").val());
+    inputWord[0] = $("#word1").val();
     var yourNumber = parseInt($("#yourInteger").val());
 
-    var yourArray = generateYourPingPong(inputFactor, inputWord, yourNumber);
+    // Gather input from first factor to change numbers
+    inputFactor[1] = parseInt($("#factor2").val());
+    inputWord[1] = $("#word2").val();
+
+    // Gather input from first factor to change numbers
+    inputFactor[2] = parseInt($("#factor3").val());
+    inputWord[2] = $("#word3").val();
+
+    yourArray = initializeYourArray(yourNumber);
+
+    for (var i = 0; i < 3; i++) {
+      yourArray = playingYourGame(yourArray, inputFactor[i], inputWord[i], yourNumber);
+      console.log(yourArray);
+    }
 
     for (var j = 0; j < yourArray.length; j++) {
       $("ul.yourListItem").append("<li>" + yourArray[j] + "</li>");

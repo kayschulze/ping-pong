@@ -1,3 +1,13 @@
+// function handles array to find all numbers that are divisible by 3 and replaces them with "ping"
+var makeThreesPing = function (array, total) {
+  for (var i = 0; i < total; i++) {
+    if (array[i] % 3 === 0) {
+      array[i] = "ping";
+    }
+  }
+
+  return array;
+};
 
 // function handles all other functions for determining final Ping Pong output array
 var generatePingPong = function(integer) {
@@ -5,6 +15,8 @@ var generatePingPong = function(integer) {
   for (var i = 0; i < integer; i++) {
     outputArray[i] = i + 1;
   }
+
+  outputArray = makeThreesPing(outputArray, integer);
 
   return outputArray;
 };

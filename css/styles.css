@@ -6,6 +6,10 @@ body {
   background-color: beige;
 }
 
+h2 {
+  text-align: center;
+}
+
 .title {
   border-width: medium;
   height: 100px;
@@ -21,8 +25,11 @@ body {
 .menu {
   border-width: thin;
   margin: auto;
+  font-family: 'Salsa', cursive;
+  background-color: #b8d3f2;
+  z-index: 1;
 }
 
 .game {
-
+  font-family: 'Sniglet', cursive;
 }

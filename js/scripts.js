@@ -45,8 +45,12 @@ var generatePingPong = function(integer) {
   return outputArray;
 };
 
+var isInteger = function(number) {
+  return number % 1 === 0;
+};
+
 var validateInput = function(input) {
-  if (input > 1) {
+  if (input > 1 && isInteger(input)) {
     return true;
   }
   else {
@@ -62,7 +66,6 @@ $(function() {
     var inputtedNumber = $("#integer").val();
 
     if (validateInput(inputtedNumber)) {
-      console.log('hiya');
       // Calls Ping Pong counting function and returns array.git
       var outputtedArray = generatePingPong(inputtedNumber);
 

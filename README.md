@@ -45,7 +45,7 @@ _This file contains a folder for CSS (css), Javascript (js), and images (img) th
 
 ## Known Bugs
 
-_There are no known issues or bugs with this version at this time._
+_The user is able to make their own game, but that game must include 3 integer values.  The code attempts accept blank spaces but does not succeed . . . yet._
 
 ## Support and contact details
 

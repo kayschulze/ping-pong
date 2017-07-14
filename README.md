@@ -31,7 +31,11 @@ _This file contains a folder for CSS (css), Javascript (js), and images (img) th
 * Example Output: [1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, ping-pong]
 5. Inputs that are invalid (less than 1, decimal, or not a number) are given an error message and prompt the user for a new input.
 * Example Input: Q
-* Example Output: This is not a valid input.  Please try again. 
+* Example Output: This is not a valid input.  Please try again.
+6. Output from each previous attempt erases.
+* Example Input: 5 after output of [1,2, ping]
+* Example Output: [1, 2, ping, 4, pong]
+7. Spruce-Up the website to make it appealing to users.
 
 ## Known Bugs
 

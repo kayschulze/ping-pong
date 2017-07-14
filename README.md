@@ -36,6 +36,8 @@ _This file contains a folder for CSS (css), Javascript (js), and images (img) th
 * Example Input: 5 after output of [1,2, ping]
 * Example Output: [1, 2, ping, 4, pong]
 7. Spruce-Up the website to make it appealing to users.
+8. User can add at least one factor and word to make their own game.
+9. User can add at least three factors and words to make their own game.
 
 ## Known Bugs
 

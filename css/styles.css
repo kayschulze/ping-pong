@@ -24,7 +24,7 @@ h2 {
 
 .menu {
   border-width: thin;
-  margin: auto;
+  margin: 30px;
   font-family: 'Salsa', cursive;
   background-color: #b8d3f2;
   z-index: 1;

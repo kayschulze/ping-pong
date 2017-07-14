@@ -36,7 +36,7 @@
       <h3>Please enter an integer.</h3>
       <form id="userInput">
         <input id="integer" type="text">
-        <button type="submit">Let's Play</button>
+        <button type="submit" button id="myGame">Let's Play</button>
       </form>
 
       <div id="pingPongDisplay">
@@ -46,5 +46,29 @@
       <img src="img/numbers.jpeg" class="img-circle">
     </div>
 
+    <div class="container yourGame col-md-4">
+      <h2>Now try your game:</h2>
+      <p>In your game, you will chose a factor and decide which word to replace it with.</p>
+      <form id="userChoice">
+        <div class="form-group">
+          <label for="factor1">Factor 1:</label>
+          <input id="factor1" type="text">
+        <div class="form-group">
+          <label for="word1">Word 1:</label>
+          <input id="word1" type="text">
+        </div>
+        <div class="form-group">
+          <label for="yourInteger">Your Number:</label>
+          <input id="yourInteger" type="text">
+        </div>
+        <button type="submit" id="yourGame">Let's Try It</button>
+      </form>
+
+      <div id="yourDisplay">
+          <ul class="yourListItem" id="outputtedArray">
+          </ul>
+      </div>
+
+    </div>
   </body>
 </html>

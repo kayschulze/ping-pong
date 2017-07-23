@@ -80,7 +80,7 @@ var validateInput = function(input) {
 
 var validateIntegerNull = function(input) {
   console.log(input);
-  if (validateInput(input) || input === undefined) {
+  if (validateInput(input) || isNaN(input)) {
     return true;
   }
   else {
